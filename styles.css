@@ -1,8 +1,32 @@
-.grid-container1{
-    height:100%;
-    width:100%;
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body {
+    position: relative;
+}
+
+.flx-c-cl {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.grid-container1 {
+    height:170vh;
+    width:100vw;
     display:grid;
-    grid-template-rows: 3fr 2.5fr 11fr 4fr;
+    border:3x solid green;  
+    grid-template-rows: 3fr 2.5fr 11fr 3fr;
+    grid-template-areas: 'g1i1'
+                         'g1i2'
+                         'g1i3'
+                         'g1i4';
 }
 
 .grid1-item1 {
@@ -21,12 +45,103 @@
 }
 
 .grid1-item4 {
-    background:brown;
+    background:rgba(48, 8, 8, 0.767);
     grid-area: g1i4;
+    padding: 2.8rem;
+    text-align: center;
+    color:white;
+    font-size:1.2rem;
 }
 
+.grid1-item4 .last {
+    margin-top:6rem;
+    font-size: 1rem;
+}
+
+.grid1-item4 span {
+    color:teal;
+    text-decoration: underline;
+}
+
+.grid2-item1 {
+    background: url("img/robot.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+.grid2-item2 {
+    padding:1.5rem;
+    text-align: left;
+    background:skyblue;
+}
+
+.grid2-item2 h2 {
+    color:purple;
+    font-size: 2.2rem;
+}
+
+.grid2-item2 p {
+    font-size: 1.2rem;
+}
+
+.grid2-item2 a {
+    margin-top: 1rem;
+    display: block;
+    text-decoration: none;
+    color:purple;
+    padding:1.1rem;
+    background:white;
+    width:50%;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.25rem;
+}
+
+.grid2-item2 h2.last {
+    margin-bottom:1.5rem;
+}
+
+.grid2-item2 span {
+    text-decoration: underline;
+}
+
+.grid2-item3 {   
+    font-size: 15rem;    
+    color:grey;
+}
+
+.grid2-item4 i {  
+    font-size: 15rem;    
+    color:grey;
+}
+
+.grid2-item5 {
+    padding:1rem 0.8rem;
+    font-style: italic;
+    background:rgb(101, 112, 214);
+    color:black;
+    font-size: 1.1rem;
+}
+
+
 @media screen and (max-width: 768px){
-    
+
+    .grid-container2 {
+        width: 350px;
+        height:120vh;
+        margin: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border:1px solid red;
+        max-width: 350px;;
+
+        display:grid;
+        grid-template-rows: 4fr 4fr 5fr 5fr 2.5fr;
+    }
+  
 }
 
 @media screen and (max-width: 991px){
@@ -34,5 +149,5 @@
 }
 
 @media screen and (max-width:1200px){
-    
+
 }
