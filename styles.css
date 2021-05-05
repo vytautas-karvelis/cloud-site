@@ -17,6 +17,15 @@ body {
 	align-content: center;
 }
 
+.flx-c-rw {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
 .grid-container1 {
     height:170vh;
     width:100vw;
@@ -124,8 +133,29 @@ body {
     font-size: 1.1rem;
 }
 
+.nav-container {
+    width: 350px;
+    max-width: 350px;    
+    border:1px solid red;
+    justify-content: space-between;
+    padding:1rem 1.5rem;
+    color:white;
+}
+
+.nav-container .drop {
+    border:1px solid white;
+    padding:0.25rem;
+}
+
 
 @media screen and (max-width: 768px){
+
+    .nav-container {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     .grid-container2 {
         width: 350px;
