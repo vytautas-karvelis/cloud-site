@@ -1,0 +1,38 @@
+.grid-container1{
+    height:100%;
+    width:100%;
+    display:grid;
+    grid-template-rows: 3fr 2.5fr 11fr 4fr;
+}
+
+.grid1-item1 {
+    background: purple;
+    grid-area: g1i1;
+}
+
+.grid1-item2 {
+    background:skyblue;
+    grid-area:g1i2;
+}
+
+.grid1-item3 {
+    background: purple;
+    grid-area: g1i3;
+}
+
+.grid1-item4 {
+    background:brown;
+    grid-area: g1i4;
+}
+
+@media screen and (max-width: 768px){
+    
+}
+
+@media screen and (max-width: 991px){
+
+}
+
+@media screen and (max-width:1200px){
+    
+}
