@@ -6,6 +6,7 @@
 
 body {
     position: relative;
+    
 }
 
 .flx-c-cl {
@@ -77,12 +78,14 @@ body {
     background-size: cover;
     background-position:center;
     background-repeat:no-repeat;
+    grid-area: g2i1;
 }
 
 .grid2-item2 {
     padding:1.5rem;
     text-align: left;
     background:skyblue;
+    grid-area: g2i2;
 }
 
 .grid2-item2 h2 {
@@ -118,11 +121,13 @@ body {
 .grid2-item3 {   
     font-size: 15rem;    
     color:grey;
+    grid-area: g2i3;
 }
 
 .grid2-item4 i {  
     font-size: 15rem;    
     color:grey;
+    grid-area: g2i4;
 }
 
 .grid2-item5 {
@@ -131,6 +136,7 @@ body {
     background:rgb(101, 112, 214);
     color:black;
     font-size: 1.1rem;
+    grid-area: g2i5;
 }
 
 .nav-container {
@@ -166,15 +172,60 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         border:1px solid red;
-        max-width: 350px;;
-
+     
         display:grid;
         grid-template-rows: 4fr 4fr 5fr 5fr 2.5fr;
+        grid-template-areas: 'g2i1'
+                             'g2i2'
+                             'g2i3'
+                             'g2i4'
+                             'g2i5';
     }
   
 }
 
-@media screen and (max-width: 991px){
+@media screen and (min-width: 770px){
+
+    .grid-container2 {
+        width: 769px;
+        height:120vh;
+        margin: 0;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border:1px solid red;
+        
+
+        display:grid;
+        grid-template-rows: 2fr 1fr 1fr;
+        grid-template-columns:1fr 1fr;
+        grid-template-areas: 'g2i1 g2i1'
+                              'g2i2 g2i3'
+                              'g2i4 g2i5' ;
+    }
+
+    .nav-container {
+        width:769px;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate( -50%, -50%);
+        max-width:769px;
+    }
+
+    .nav-container .drop {
+        margin-left: 31rem;
+    }
+
+    .grid2-item5 p {
+        font-size: 1.4rem;
+        text-align: left;
+    }
+
+    .grid1-item4 p {
+        font-size: 1.5rem;
+    }
 
 }
 
